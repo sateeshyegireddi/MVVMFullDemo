@@ -15,9 +15,16 @@ class TrackCell: UITableViewCell {
         return label
     }()
     
+    lazy var artistURLLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        return label
+    }()
+    
     var viewModel: TrackCellViewModel? {
         didSet {
             artistNameLabel.text = viewModel?.artistName
+            artistURLLabel.text = viewModel?.artistURL
         }
     }
     
@@ -26,20 +33,43 @@ class TrackCell: UITableViewCell {
         // Initialization code
         
         contentView.addSubview(artistNameLabel)
+        contentView.addSubview(artistURLLabel)
+
         artistNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            artistNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            artistNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-            artistNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            artistNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
-        ])
-    }
+        artistURLLabel.translatesAutoresizingMaskIntoConstraints = false
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        artistNameLabel.anchor(top: contentView.topAnchor,
+                               leading: contentView.leadingAnchor,
+                               bottom: artistURLLabel.topAnchor,
+                               trailing: contentView.trailingAnchor,
+                               padding: UIEdgeInsets(top: 12, left: 12, bottom: 8, right: 12))
+        artistURLLabel.anchor(top: artistNameLabel.bottomAnchor,
+                               leading: artistNameLabel.leadingAnchor,
+                               bottom: contentView.bottomAnchor,
+                               trailing: artistNameLabel.trailingAnchor,
+                               padding: UIEdgeInsets(top: 0, left: 0, bottom: 12, right: 0))
     }
+}
+
+extension UIView {
+    /**
+     Anchors a view using the input constraints.
+     - Parameter top: The top constraint.
+     - Parameter leading: The leading or left contraint.
+     - Parameter bottom: The bottom constraint.
+     - Parameter trailing: The trailing or right contraint.
+     - Parameter padding: The padding to be applied to the constraints. Requires init with UIEdgeInsets.
+     - Parameter size: The size to be added to the view. Requires init with CGSize. If all other constraints are set, sizes do not have any effect.
+     */
     
+    func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?,
+                padding: UIEdgeInsets = .zero, size: CGSize = .zero) {
+        translatesAutoresizingMaskIntoConstraints = false
+        if let top = top { topAnchor.constraint(equalTo: top, constant: padding.top).isActive = true }
+        if let leading = leading { leadingAnchor.constraint(equalTo: leading, constant: padding.left).isActive = true }
+        if let bottom = bottom { bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom).isActive = true }
+        if let trailing = trailing { trailingAnchor.constraint(equalTo: trailing, constant: -padding.right).isActive = true }
+        if size.width != 0 { widthAnchor.constraint(equalToConstant: size.width).isActive = true }
+        if size.height != 0 { heightAnchor.constraint(equalToConstant: size.height).isActive = true }
+    }
 }

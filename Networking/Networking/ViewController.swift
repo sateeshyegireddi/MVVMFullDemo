@@ -64,6 +64,7 @@ class ViewController: UIViewController {
             if isLoading { self.presentActivity() }
             else { self.dismissActivity() }
         }
+        
         viewModel.error.bind { [unowned self] (field) in
             self.presentAlert(with: field)
         }
@@ -109,7 +110,7 @@ extension ViewController: UITableViewDataSource {
 //MARK: - UITableView Delegate -
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return UITableView.automaticDimension
     }
 }
 

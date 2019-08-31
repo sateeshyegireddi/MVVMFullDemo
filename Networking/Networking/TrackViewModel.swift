@@ -48,7 +48,7 @@ class TrackViewModel {
     }
 }
 
-//MARK: - ViewModel -
+//MARK: - Cell ViewModel -
 struct TrackCellViewModel {
     var artistName: String
     var artistURL: String
