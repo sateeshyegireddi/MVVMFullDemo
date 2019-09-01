@@ -43,6 +43,7 @@
 		F970FEEA231AF99400A7B319 /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970FEE7231AF99400A7B319 /* FileLoader.swift */; };
 		F970FEEB231AF99400A7B319 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = F970FEE8231AF99400A7B319 /* Tracks.json */; };
 		F970FEEC231AF99400A7B319 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = F970FEE8231AF99400A7B319 /* Tracks.json */; };
+		F970FEEE231BBBD500A7B319 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970FEED231BBBD500A7B319 /* MockDataManager.swift */; };
 		F98148E323119B1E006CBA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98148E223119B1E006CBA0A /* AppDelegate.swift */; };
 		F98148E523119B1E006CBA0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98148E423119B1E006CBA0A /* SceneDelegate.swift */; };
 		F98148E723119B1E006CBA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98148E623119B1E006CBA0A /* ViewController.swift */; };
@@ -50,7 +51,6 @@
 		F98148EC23119B20006CBA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98148EB23119B20006CBA0A /* Assets.xcassets */; };
 		F98148EF23119B20006CBA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98148ED23119B20006CBA0A /* LaunchScreen.storyboard */; };
 		F99F0B5A231A6AFF00ACB03D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F0B59231A6AFF00ACB03D /* Constraints.swift */; };
-		F99F0B5C231A701900ACB03D /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F0B5B231A701900ACB03D /* DataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +83,7 @@
 		F93160CA2312C5B000222A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F970FEE7231AF99400A7B319 /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
 		F970FEE8231AF99400A7B319 /* Tracks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
+		F970FEED231BBBD500A7B319 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockDataManager.swift; path = ../../../../../../System/Volumes/Data/Users/sateesh/Desktop/MVVMFullDemo/Networking/NetworkingTests/MockDataManager.swift; sourceTree = "<group>"; };
 		F98148DF23119B1E006CBA0A /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98148E223119B1E006CBA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F98148E423119B1E006CBA0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		F98148EE23119B20006CBA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F98148F023119B20006CBA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F99F0B59231A6AFF00ACB03D /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = ../../../../../../../System/Volumes/Data/Users/sateesh/Desktop/MVVMFullDemo/Networking/Networking/Extensions/Constraints.swift; sourceTree = "<group>"; };
-		F99F0B5B231A701900ACB03D /* DataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +118,9 @@
 			children = (
 				F970FEE7231AF99400A7B319 /* FileLoader.swift */,
 				F970FEE8231AF99400A7B319 /* Tracks.json */,
+				F970FEED231BBBD500A7B319 /* MockDataManager.swift */,
 				F93160C82312C5B000222A62 /* NetworkingTests.swift */,
 				F9283DA2231AC8820027DA7D /* TrackViewModelTests.swift */,
-				F99F0B5B231A701900ACB03D /* DataManagerTests.swift */,
 				F93160CA2312C5B000222A62 /* Info.plist */,
 			);
 			path = NetworkingTests;
@@ -311,6 +311,7 @@
 				F9283DAD231AD0190027DA7D /* ActivityPresentable.swift in Sources */,
 				F9283DA8231AD00A0027DA7D /* ViewController.swift in Sources */,
 				F9283DA6231AC8D20027DA7D /* Track.swift in Sources */,
+				F970FEEE231BBBD500A7B319 /* MockDataManager.swift in Sources */,
 				F9283DAA231AD00F0027DA7D /* SceneDelegate.swift in Sources */,
 				F9283DA7231ACA260027DA7D /* TrackViewModel.swift in Sources */,
 				F9283DB2231AD0250027DA7D /* TrackCell.swift in Sources */,
@@ -320,7 +321,6 @@
 				F9283DAE231AD0190027DA7D /* ErrorPresentable.swift in Sources */,
 				F9283DAF231AD0190027DA7D /* UITableViewExtension.swift in Sources */,
 				F9283DA5231AC8C30027DA7D /* APIRequest.swift in Sources */,
-				F99F0B5C231A701900ACB03D /* DataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

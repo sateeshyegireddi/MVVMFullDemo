@@ -137,25 +137,3 @@ extension TrackViewModelTests {
         dataManager.fetchWithSuccess()
     }
 }
-
-class MockDataManager {
-    
-    var tracks = [Track]()
-    var isDataFetched = false
-    var handler: (([Track]?, Field?) -> ())!
-    
-    func fetchWithSuccess() {
-        handler(tracks, nil)
-    }
-    
-    func fetchWithError(_ error: Field?) {
-        handler(nil, error)
-    }
-}
-
-extension MockDataManager: FetchTracks {
-    func fetchTracks(with request: APIRequest, handler: @escaping ([Track]?, Field?) -> ()) {
-        isDataFetched = true
-        self.handler = handler
-    }
-}
