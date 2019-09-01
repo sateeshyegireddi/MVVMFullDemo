@@ -44,6 +44,7 @@
 		F970FEEB231AF99400A7B319 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = F970FEE8231AF99400A7B319 /* Tracks.json */; };
 		F970FEEC231AF99400A7B319 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = F970FEE8231AF99400A7B319 /* Tracks.json */; };
 		F970FEEE231BBBD500A7B319 /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970FEED231BBBD500A7B319 /* MockDataManager.swift */; };
+		F970FEF2231BC22500A7B319 /* TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970FEF1231BC22500A7B319 /* TrackTests.swift */; };
 		F98148E323119B1E006CBA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98148E223119B1E006CBA0A /* AppDelegate.swift */; };
 		F98148E523119B1E006CBA0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98148E423119B1E006CBA0A /* SceneDelegate.swift */; };
 		F98148E723119B1E006CBA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98148E623119B1E006CBA0A /* ViewController.swift */; };
@@ -84,6 +85,9 @@
 		F970FEE7231AF99400A7B319 /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
 		F970FEE8231AF99400A7B319 /* Tracks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
 		F970FEED231BBBD500A7B319 /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockDataManager.swift; path = ../../../../../../System/Volumes/Data/Users/sateesh/Desktop/MVVMFullDemo/Networking/NetworkingTests/MockDataManager.swift; sourceTree = "<group>"; };
+		F970FEF1231BC22500A7B319 /* TrackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackTests.swift; path = ../../../../../../System/Volumes/Data/Users/sateesh/Desktop/MVVMFullDemo/Networking/NetworkingTests/TrackTests.swift; sourceTree = "<group>"; };
+		F970FEF4231BC33D00A7B319 /* TrackViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModelTests.swift; sourceTree = "<group>"; };
+		F970FEF5231BC33D00A7B319 /* TrackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTests.swift; sourceTree = "<group>"; };
 		F98148DF23119B1E006CBA0A /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98148E223119B1E006CBA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F98148E423119B1E006CBA0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,13 +121,24 @@
 			isa = PBXGroup;
 			children = (
 				F970FEE7231AF99400A7B319 /* FileLoader.swift */,
-				F970FEE8231AF99400A7B319 /* Tracks.json */,
 				F970FEED231BBBD500A7B319 /* MockDataManager.swift */,
 				F93160C82312C5B000222A62 /* NetworkingTests.swift */,
+				F970FEF3231BC33D00A7B319 /* Track Tests */,
+				F970FEF1231BC22500A7B319 /* TrackTests.swift */,
 				F9283DA2231AC8820027DA7D /* TrackViewModelTests.swift */,
 				F93160CA2312C5B000222A62 /* Info.plist */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		F970FEF3231BC33D00A7B319 /* Track Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F970FEE8231AF99400A7B319 /* Tracks.json */,
+				F970FEF5231BC33D00A7B319 /* TrackTests.swift */,
+				F970FEF4231BC33D00A7B319 /* TrackViewModelTests.swift */,
+			);
+			path = "Track Tests";
 			sourceTree = "<group>";
 		};
 		F98148D623119B1D006CBA0A = {
@@ -307,6 +322,7 @@
 				F91F746F231A955B00C5B43E /* ValidationLogicError.swift in Sources */,
 				F9283DB0231AD0190027DA7D /* Constraints.swift in Sources */,
 				F93160C92312C5B000222A62 /* NetworkingTests.swift in Sources */,
+				F970FEF2231BC22500A7B319 /* TrackTests.swift in Sources */,
 				F9283DA4231AC8BB0027DA7D /* DataManager.swift in Sources */,
 				F9283DAD231AD0190027DA7D /* ActivityPresentable.swift in Sources */,
 				F9283DA8231AD00A0027DA7D /* ViewController.swift in Sources */,
