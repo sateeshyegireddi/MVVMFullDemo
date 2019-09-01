@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Response: Codable {
+struct Response<T: Codable>: Codable {
     var resultCount: Int
-    var tracks: [Track]
+    var data: [T]
     
     enum CodingKeys: String, CodingKey {
         case resultCount = "resultCount"
-        case tracks = "results"
+        case data = "results"
     }
 }
 

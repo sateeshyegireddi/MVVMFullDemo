@@ -11,7 +11,7 @@ import Foundation
 class TrackViewModel {
     
     //MARK: - Properties -
-    private var dataManager: DataManager
+    private var dataManager: FetchTracks
     private var tracks: [Track] = []
     var term = Dynamic<String?>(nil)
     var country = "IN"
@@ -21,7 +21,7 @@ class TrackViewModel {
     private var cellViewModels: [TrackCellViewModel] = []
     
     //MARK: - Initialisation -
-    init(dataManager: DataManager = DataManager()) {
+    init(dataManager: FetchTracks = DataManager()) {
         self.dataManager = dataManager
     }
     
@@ -37,14 +37,14 @@ class TrackViewModel {
         }
     }
     
-    private func createCellViewModel(_ track: Track) -> TrackCellViewModel {
+    func createCellViewModel(_ track: Track) -> TrackCellViewModel {
         let trackCellViewModel = TrackCellViewModel(artistName: track.artistName,
                                                     artistURL: track.artworkUrl100)
         return trackCellViewModel
     }
     
-    func getCellViewModel(at index: Int) -> TrackCellViewModel {
-        return cellViewModels[index]
+    func getCellViewModel(at indexPath: IndexPath) -> TrackCellViewModel {
+        return cellViewModels[indexPath.row]
     }
 }
 

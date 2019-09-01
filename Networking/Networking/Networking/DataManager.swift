@@ -10,18 +10,18 @@ import Foundation
 
 protocol FetchTracks {
     func fetchTracks(with request: APIRequest,
-                            handler: @escaping (_ tacks: [Track]?, _ error: Field?) -> ())
+                            handler: @escaping (_ tracks: [Track]?, _ error: Field?) -> ())
 }
 
 class DataManager {}
 
 extension DataManager: FetchTracks {
     func fetchTracks(with request: APIRequest,
-                            handler: @escaping (_ tacks: [Track]?, _ error: Field?) -> ()) {
-        APIClient.send(request) { (result: Result<Response, Field>) in
+                     handler: @escaping (_ tracks: [Track]?, _ error: Field?) -> ()) {
+        APIClient.send(request) { (result: Result<Response<Track>, Field>) in
             switch result {
             case .success(let response):
-                handler(response.tracks, nil)
+                handler(response.data, nil)
             case .failure(let field):
                 handler(nil, field)
             }

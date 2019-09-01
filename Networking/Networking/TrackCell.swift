@@ -35,9 +35,6 @@ class TrackCell: UITableViewCell {
         contentView.addSubview(artistNameLabel)
         contentView.addSubview(artistURLLabel)
 
-        artistNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        artistURLLabel.translatesAutoresizingMaskIntoConstraints = false
-
         artistNameLabel.anchor(top: contentView.topAnchor,
                                leading: contentView.leadingAnchor,
                                bottom: artistURLLabel.topAnchor,

@@ -102,7 +102,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: TrackCell.self, for: indexPath)
-        cell.viewModel = viewModel.getCellViewModel(at: indexPath.row)
+        cell.viewModel = viewModel.getCellViewModel(at: indexPath)
         return cell
     }
 }
